@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111019">
+  <title>Admin Dashboard — Upasana Yadav</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#111019;--sidebar:#15131d;--panel:#1a1823;--panel-hi:#211d2b;--line:rgba(255,255,255,.09);--text:#f8f4f7;--muted:#a8a1b1;--pink:#ff75aa;--blue:#89cfff;--green:#8ce0bc;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.5}button,input,select{font:inherit}button,a,select{ -webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}.layout{min-height:100vh;display:grid;grid-template-columns:248px 1fr}.sidebar{position:sticky;top:0;height:100vh;padding:25px 16px;background:linear-gradient(180deg,#17141f,#13121a);border-right:1px solid var(--line);display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:11px;padding:0 11px 31px;font-size:.79rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.brand-mark{width:37px;height:37px;display:grid;place-items:center;border:1px solid rgba(255,143,189,.65);border-radius:50%;color:#ff9fc7;background:radial-gradient(circle at 35% 25%,rgba(255,93,158,.21),rgba(119,200,255,.08) 58%,transparent 68%);font:600 1.15rem var(--serif)}.side-label{padding:0 11px;margin:3px 0 9px;color:#716b7a;text-transform:uppercase;letter-spacing:.15em;font-size:.62rem;font-weight:700}.side-nav{display:grid;gap:5px}.side-nav a{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:9px;color:#b5aebd;font-size:.83rem;transition:background .2s,color .2s}.side-nav a:hover,.side-nav a.active{background:rgba(255,117,170,.11);color:#ffd1e2}.side-icon{width:20px;text-align:center;color:#ff91ba;font-size:1rem}.side-bottom{margin-top:auto}.storage-note{margin:18px 3px 13px;padding:13px;border:1px solid rgba(137,207,255,.15);border-radius:10px;background:rgba(137,207,255,.05);color:#bcb6c4;font-size:.7rem}.storage-note strong{display:flex;align-items:center;gap:7px;color:#d8f0ff;font-size:.73rem;margin-bottom:5px}.storage-dot{width:7px;height:7px;border-radius:50%;background:#8ce0bc;box-shadow:0 0 9px #8ce0bc}.site-link{display:flex;align-items:center;gap:9px;padding:10px 12px;color:#b5aebd;font-size:.8rem}.main{min-width:0;padding:29px clamp(22px,4vw,58px) 48px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:37px}.crumb{font-size:.75rem;color:#a49dac}.crumb strong{color:#eee8f1;font-weight:600}.top-actions{display:flex;align-items:center;gap:10px}.icon-button{width:39px;height:39px;border:1px solid var(--line);border-radius:50%;background:var(--panel);color:#dbd5df;display:grid;place-items:center;cursor:pointer}.user-chip{display:flex;align-items:center;gap:10px;padding:5px 11px 5px 5px;border:1px solid var(--line);border-radius:999px;background:var(--panel)}.avatar{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(140deg,#ff75aa,#8346a5);color:#fff;font-weight:700;font-size:.72rem}.user-chip span:last-child{font-size:.75rem;color:#eee8f0}.page-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}.overline{font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;color:#ffa0c6;font-weight:700}.page-heading h1{font:500 clamp(2rem,4vw,3rem)/1.12 var(--serif);letter-spacing:-.035em;margin:8px 0 6px}.page-heading p{margin:0;color:var(--muted);font-size:.85rem}.today{color:#bcb5c4;font-size:.78rem;white-space:nowrap}.stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:24px}.stat-card{position:relative;overflow:hidden;min-height:123px;padding:18px 19px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,#1c1925,#191721)}.stat-card:after{content:"";position:absolute;width:100px;height:100px;right:-43px;top:-48px;border-radius:50%;background:var(--glow,rgba(255,117,170,.16));filter:blur(2px)}.stat-top{display:flex;align-items:center;justify-content:space-between;color:#a9a1b0;font-size:.72rem}.stat-icon{width:29px;height:29px;display:grid;place-items:center;border-radius:8px;color:var(--accent,var(--pink));background:color-mix(in srgb,var(--accent,var(--pink)) 12%,transparent);font-size:.85rem}.stat-value{display:block;margin:13px 0 1px;font:500 1.75rem/1 var(--serif)}.stat-foot{font-size:.66rem;color:#8e8797}.stat-card:nth-child(2){--accent:#c59cff;--glow:rgba(197,156,255,.12)}.stat-card:nth-child(3){--accent:#89cfff;--glow:rgba(137,207,255,.13)}.stat-card:nth-child(4){--accent:#8ce0bc;--glow:rgba(140,224,188,.12)}.panel{border:1px solid var(--line);border-radius:13px;background:var(--panel);overflow:hidden}.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:19px 21px;border-bottom:1px solid var(--line)}.panel-title{font:500 1.25rem var(--serif);margin:0}.panel-subtitle{color:var(--muted);font-size:.72rem;margin:3px 0 0}.toolbar{display:flex;align-items:center;gap:9px}.search-wrap{position:relative}.search-wrap span{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#938b9c;font-size:.9rem}.search{width:min(240px,34vw);height:37px;padding:0 11px 0 34px;border:1px solid var(--line);border-radius:8px;outline:none;background:#14121a;color:var(--text);font-size:.76rem}.search:focus,select:focus{border-color:rgba(255,117,170,.62)}.filter{height:37px;padding:0 30px 0 11px;border:1px solid var(--line);border-radius:8px;outline:none;background:#14121a;color:#ddd6e1;font-size:.75rem}.filter option,.status-select option{background:#211d2b}.export{height:37px;padding:0 13px;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,117,170,.3);border-radius:8px;background:rgba(255,117,170,.1);color:#ffd3e4;font-size:.75rem;font-weight:600;cursor:pointer}.export:hover{background:rgba(255,117,170,.18)}.table-scroll{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th{padding:12px 18px;text-align:left;color:#888291;text-transform:uppercase;letter-spacing:.11em;font-size:.61rem;font-weight:700;border-bottom:1px solid var(--line)}td{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.055);font-size:.76rem;color:#d8d2dd}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:rgba(255,255,255,.018)}.person{display:flex;align-items:center;gap:10px;min-width:178px}.person-avatar{width:32px;height:32px;display:grid;place-items:center;flex:none;border-radius:10px;background:linear-gradient(145deg,rgba(255,117,170,.24),rgba(137,207,255,.18));color:#ffd8e7;font-size:.7rem;font-weight:700}.person-name{display:block;color:#f5eff6;font-weight:600;font-size:.75rem}.person-email{display:block;color:#928b9a;font-size:.66rem;margin-top:2px}.event-name{color:#eee8f1}.date-cell{color:#c5becb}.received{color:#928b9a}.status-select{max-width:125px;height:31px;padding:0 25px 0 10px;border:1px solid var(--line);border-radius:999px;outline:none;background:#211d2b;color:#ddd5e0;font-size:.68rem}.status-select[data-status="new"]{border-color:rgba(255,117,170,.28);color:#ffb1cd;background:rgba(255,117,170,.09)}.status-select[data-status="confirmed"]{border-color:rgba(140,224,188,.27);color:#a5efd0;background:rgba(140,224,188,.08)}.status-select[data-status="declined"]{border-color:rgba(180,170,190,.2);color:#bcb5c4;background:rgba(180,170,190,.06)}.empty{text-align:center!important;padding:52px 20px!important;color:#a49dac!important;white-space:normal}.empty strong{display:block;color:#e5dfea;font:500 1.2rem var(--serif);margin:8px 0}.empty-mark{font-size:1.5rem;color:#ff9fc7}.table-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 19px;border-top:1px solid var(--line);color:#928b9a;font-size:.68rem}.notice{display:flex;gap:11px;margin-top:19px;padding:14px 16px;border:1px solid rgba(255,194,123,.15);border-radius:10px;background:rgba(255,194,123,.045);color:#b8afbd;font-size:.7rem}.notice-icon{color:#ffd08b;font-size:1rem}.notice strong{color:#e7dce5}.notice p{margin:2px 0 0}.toast{position:fixed;right:24px;bottom:24px;z-index:5;padding:12px 17px;border:1px solid rgba(140,224,188,.25);border-radius:9px;background:#1a2824;color:#baf0d5;box-shadow:0 10px 30px #0006;font-size:.78rem;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none}.toast.show{opacity:1;transform:translateY(0)}
+    @media(max-width:1000px){.layout{grid-template-columns:205px 1fr}.sidebar{padding-inline:11px}.stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-heading{align-items:start;flex-direction:column}.today{white-space:normal}}
+    @media(max-width:680px){.layout{display:block}.sidebar{position:relative;width:100%;height:auto;padding:12px 15px;border-right:0;border-bottom:1px solid var(--line);display:flex;flex-direction:row;align-items:center;justify-content:space-between}.brand{padding:0;font-size:.7rem}.brand-mark{width:33px;height:33px}.side-label,.storage-note,.site-link{display:none}.side-nav{display:flex;gap:3px}.side-nav a{width:38px;height:38px;justify-content:center;padding:0;font-size:0}.side-nav a .side-icon{font-size:1rem}.side-nav a.active{background:rgba(255,117,170,.14)}.main{padding:20px 15px 38px}.topbar{margin-bottom:25px}.crumb{font-size:.68rem}.user-chip span:last-child{display:none}.page-heading{margin-bottom:20px}.page-heading h1{font-size:2.3rem}.stat-grid{gap:9px;margin-bottom:17px}.stat-card{min-height:108px;padding:14px}.stat-top{font-size:.66rem}.stat-value{font-size:1.55rem}.panel-heading{align-items:flex-start;flex-direction:column;padding:16px}.toolbar{width:100%;flex-wrap:wrap}.search-wrap{flex:1}.search{width:100%}.filter{flex:1}.export{flex:none}.table-scroll{margin:0 -1px}th,td{padding:12px 13px}.table-footer{padding-inline:14px}.notice{margin-top:14px}.toast{right:14px;bottom:14px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">U</span><span>Upasana Yadav</span></a>
+      <div class="side-label">Workspace</div>
+      <nav class="side-nav" aria-label="Dashboard navigation">
+        <a class="active" href="#overview" aria-current="page"><span class="side-icon">▦</span>Overview</a>
+        <a href="#bookings"><span class="side-icon">♡</span>Enquiries</a>
+      </nav>
+      <div class="side-bottom">
+        <div class="storage-note"><strong><i class="storage-dot"></i> Local browser storage</strong>Enquiries are only saved in this browser. Use a secure backend before publishing for real bookings.</div>
+        <a class="site-link" href="index.html"><span>↗</span> View public website</a>
+      </div>
+    </aside>
+    <main class="main" id="overview">
+      <div class="topbar"><div class="crumb">Workspace&nbsp; / &nbsp;<strong>Overview</strong></div><div class="top-actions"><button class="icon-button" id="refresh" type="button" aria-label="Refresh dashboard">↻</button><div class="user-chip"><span class="avatar">UY</span><span>Upasana Yadav</span></div></div></div>
+      <header class="page-heading"><div><span class="overline">Mohabbat · event admin</span><h1>Good evening, Upasana</h1><p>Here’s what’s happening with your event enquiries.</p></div><div class="today" id="today"></div></header>
+      <section class="stat-grid" aria-label="Enquiry summary">
+        <article class="stat-card"><div class="stat-top"><span>Total enquiries</span><span class="stat-icon">♡</span></div><strong class="stat-value" id="total-count">0</strong><span class="stat-foot">All booking requests</span></article>
+        <article class="stat-card"><div class="stat-top"><span>New to review</span><span class="stat-icon">✳</span></div><strong class="stat-value" id="new-count">0</strong><span class="stat-foot">Waiting for your response</span></article>
+        <article class="stat-card"><div class="stat-top"><span>Confirmed</span><span class="stat-icon">✓</span></div><strong class="stat-value" id="confirmed-count">0</strong><span class="stat-foot">Marked as confirmed</span></article>
+        <article class="stat-card"><div class="stat-top"><span>Upcoming</span><span class="stat-icon">◷</span></div><strong class="stat-value" id="upcoming-count">0</strong><span class="stat-foot">Future confirmed events</span></article>
+      </section>
+      <section class="panel" id="bookings" aria-labelledby="booking-title">
+        <div class="panel-heading"><div><h2 class="panel-title" id="booking-title">Booking enquiries</h2><p class="panel-subtitle">Review requests and keep each enquiry up to date.</p></div><div class="toolbar"><label class="search-wrap"><span aria-hidden="true">⌕</span><input class="search" id="search" type="search" placeholder="Search name, email, event…" aria-label="Search enquiries"></label><select class="filter" id="status-filter" aria-label="Filter by status"><option value="all">All statuses</option><option value="New">New</option><option value="Confirmed">Confirmed</option><option value="Declined">Declined</option></select><button class="export" id="export" type="button"><span>↓</span> Export CSV</button></div></div>
+        <div class="table-scroll"><table><thead><tr><th>Guest</th><th>Celebration</th><th>Preferred date</th><th>Received</th><th>Status</th></tr></thead><tbody id="booking-rows"></tbody></table></div>
+        <div class="table-footer"><span id="result-count">Showing 0 enquiries</span><span>Newest first</span></div>
+      </section>
+      <aside class="notice"><span class="notice-icon">ⓘ</span><div><strong>Demo storage is local to this browser.</strong><p>This dashboard has no sign-in or shared database. For live bookings from visitors, connect the form to a private server with authentication and secure storage.</p></div></aside>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    const STORAGE_KEY='mohabbatBookings';
+    const rows=document.getElementById('booking-rows');
+    const search=document.getElementById('search');
+    const statusFilter=document.getElementById('status-filter');
+    const toast=document.getElementById('toast');
+    let allBookings=[];
+    let toastTimer;
+    document.getElementById('today').textContent=new Intl.DateTimeFormat('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date());
+    function loadBookings(){try{const parsed=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');allBookings=Array.isArray(parsed)?parsed:[]}catch(error){allBookings=[];showToast('Could not read booking data from this browser.')}render()}
+    function safeStatus(value){return ['New','Confirmed','Declined'].includes(value)?value:'New'}
+    function initials(name){return (name||'?').trim().split(/\s+/).slice(0,2).map(part=>part[0]||'').join('').toUpperCase()||'?'}
+    function formatDate(value){if(!value)return 'Not selected';const date=new Date(`${value}T00:00:00`);return Number.isNaN(date.valueOf())?'Not selected':new Intl.DateTimeFormat('en-IN',{day:'numeric',month:'short',year:'numeric'}).format(date)}
+    function formatReceived(value){const date=new Date(value);return Number.isNaN(date.valueOf())?'—':new Intl.DateTimeFormat('en-IN',{day:'numeric',month:'short',year:'numeric'}).format(date)}
+    function render(){
+      const newTotal=allBookings.filter(item=>safeStatus(item.status)==='New').length;
+      const confirmed=allBookings.filter(item=>safeStatus(item.status)==='Confirmed');
+      const today=new Date();today.setHours(0,0,0,0);
+      const upcoming=confirmed.filter(item=>item.date&&new Date(`${item.date}T00:00:00`)>=today).length;
+      document.getElementById('total-count').textContent=allBookings.length;
+      document.getElementById('new-count').textContent=newTotal;
+      document.getElementById('confirmed-count').textContent=confirmed.length;
+      document.getElementById('upcoming-count').textContent=upcoming;
+      const query=search.value.trim().toLowerCase();
+      const wanted=statusFilter.value;
+      const filtered=allBookings.filter(item=>{const status=safeStatus(item.status);const haystack=[item.name,item.email,item.event,item.date].join(' ').toLowerCase();return (!query||haystack.includes(query))&&(wanted==='all'||status===wanted)}).sort((a,b)=>new Date(b.createdAt||0)-new Date(a.createdAt||0));
+      rows.replaceChildren();
+      if(!filtered.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=5;td.className='empty';td.innerHTML='<span class="empty-mark">♡</span><strong>No enquiries yet</strong>New website booking requests will appear here.';rows.append(tr);document.getElementById('result-count').textContent=query||wanted!=='all'?'No matching enquiries':'Showing 0 enquiries';return}
+      const fragment=document.createDocumentFragment();
+      for(const booking of filtered){
+        const tr=document.createElement('tr');
+        const guest=document.createElement('td'),person=document.createElement('div'),avatar=document.createElement('span'),personText=document.createElement('span'),name=document.createElement('span'),email=document.createElement('span');
+        person.className='person';avatar.className='person-avatar';avatar.textContent=initials(booking.name);personText.className='';name.className='person-name';name.textContent=booking.name||'Guest';email.className='person-email';email.textContent=booking.email||'';personText.append(name,email);person.append(avatar,personText);guest.append(person);
+        const eventCell=document.createElement('td');eventCell.className='event-name';eventCell.textContent=booking.event||'—';
+        const dateCell=document.createElement('td');dateCell.className='date-cell';dateCell.textContent=formatDate(booking.date);
+        const receivedCell=document.createElement('td');receivedCell.className='received';receivedCell.textContent=formatReceived(booking.createdAt);
+        const statusCell=document.createElement('td'),select=document.createElement('select');select.className='status-select';select.dataset.status=safeStatus(booking.status).toLowerCase();select.setAttribute('aria-label',`Update status for ${booking.name||'guest'}`);
+        for(const optionText of ['New','Confirmed','Declined']){const option=document.createElement('option');option.value=optionText;option.textContent=optionText;option.selected=optionText===safeStatus(booking.status);select.append(option)}
+        select.addEventListener('change',()=>updateStatus(booking.id,select.value));statusCell.append(select);tr.append(guest,eventCell,dateCell,receivedCell,statusCell);fragment.append(tr);
+      }
+      rows.append(fragment);document.getElementById('result-count').textContent=`Showing ${filtered.length} of ${allBookings.length} ${allBookings.length===1?'enquiry':'enquiries'}`;
+    }
+    function updateStatus(id,status){allBookings=allBookings.map(item=>item.id===id?{...item,status}:item);try{localStorage.setItem(STORAGE_KEY,JSON.stringify(allBookings));render();showToast(`Enquiry marked ${status.toLowerCase()}.`)}catch(error){showToast('Could not save this status change.')}}
+    function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2600)}
+    function exportCsv(){
+      const query=search.value.trim().toLowerCase(),wanted=statusFilter.value;
+      const data=allBookings.filter(item=>{const status=safeStatus(item.status),haystack=[item.name,item.email,item.event,item.date].join(' ').toLowerCase();return (!query||haystack.includes(query))&&(wanted==='all'||status===wanted)});
+      if(!data.length){showToast('There are no enquiries to export.');return}
+      const quote=value=>`"${String(value??'').replaceAll('"','""')}"`;
+      const content=[['Name','Email','Celebration','Preferred date','Received','Status'],...data.map(item=>[item.name,item.email,item.event,item.date,formatReceived(item.createdAt),safeStatus(item.status)])].map(row=>row.map(quote).join(',')).join('\r\n');
+      const url=URL.createObjectURL(new Blob([content],{type:'text/csv;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download='upasana-yadav-enquiries.csv';link.click();URL.revokeObjectURL(url);showToast('CSV export downloaded.');
+    }
+    search.addEventListener('input',render);statusFilter.addEventListener('change',render);document.getElementById('refresh').addEventListener('click',loadBookings);document.getElementById('export').addEventListener('click',exportCsv);window.addEventListener('storage',event=>{if(event.key===STORAGE_KEY)loadBookings()});window.addEventListener('focus',loadBookings);loadBookings();
+  </script>
+</body>
+</html>
